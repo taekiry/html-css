@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>문서내용</title>
+    <style>
+      table{
+        width: 80%;
+        border: 3px solid #2d2020;
+        border-spacing: 10px 20px;
+        empty-cells: show;
+      }
+      th, td{
+        border: 1px solid #ccc;
+        padding: 5px 10px;
+      }
+      thead{
+        background-color: beige;
+      }
+      tbody{
+        text-align: center;
+      }
+      tfoot{
+        background-color: #ccc;
+      }
+      nav ul{
+        text-align: center;
+        list-style-type: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <header>
+        <h1>저의 페이지를 찾아주셔서 감사합니다</h1>
+        <nav>
+          <ul>
+            <li>메뉴1</li>
+            <li>메뉴2</li>
+            <li>메뉴3</li>
+            <li>메뉴4</li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <section>
+          <h2>웹개발 기초</h2>
+          <article>
+            <h3>HTML/CSS</h3>
+            <dl>
+              <dt>html</dt>
+              <dd>하이퍼텍스트 마크업 언어</dd>
+              <dd>웹문서의 내용을 작업</dd>
+              <dd>html문서는 웹브라우저에 의해 해석</dd>
+              <dt>css</dt>
+              <dd>웹문서의 디자인을 담당</dd>
+              <dd>내부 스타일시트는 head영역에 style 태그에 작업</dd>
+              <dd>외부 스타일시트는 파일로 저장하고 연결해서 사용</dd>
+            </dl>
+            <h3>표만들기</h3>
+            <table>
+              <caption>과정안내</caption>
+              <colgroup>
+                <col style="background-color: bisque;">
+                <col>
+                <col span="2">
+                <!-- <col> -->
+              </colgroup>
+              <thead>
+                <tr>
+                  <th>순번</th>
+                  <th>과정명</th>
+                  <th>인원</th>
+                  <th>비고</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td rowspan="2">html</td>
+                  <td>5명</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <!-- <td>html</td> -->
+                  <td>10명</td>
+                  <td>중급반</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td rowspan="2">css</td>
+                  <td>7명</td>
+                  <td>초급반</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <!-- <td>css</td> -->
+                  <td>11명</td>
+                  <td>고급반</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td colspan="4">인원은 사정에 따라 변동될 수 있습니다</td>
+                </tr>
+              </tfoot>
+            </table>
+          </article>
+          <article>
+            <h3>Javascript</h3>
+            <dl>
+              <dt>javascript</dt>
+              <dd>사용자와 상호작용을 나타내는 언어</dd>
+              <dd>html안에 script 태그에 작업</dd>
+              <dd>위치는 body 닫히기 전에 사용</dd>
+            </dl>
+          </article>
+        </section>
+      </main>
+      <div id="multimedia">
+        <h3>이미지 삽입</h3>
+        <img src="img/레드향.jpg" alt="레드향" width="200" height="200" title="레드향">
+        
+        <h3>외부 파일 삽입</h3>
+        <object data="media/2-1.실습(html작성).pdf" width="500" height="300"></object>
+        <embed src="media/2-1.실습(html작성).pdf" width="500" height="300">
+        <object data="index.html" width="500" height="300"></object>
+        <iframe src="media/2-1.실습(html작성).pdf" width="500" height="300"></iframe>
+        
+        <h3>오디오/비디오 삽입</h3>
+        <audio src="media/미소속에비친그대.mp3" controls></audio>
+        <video src="media/사랑한다사랑해.mp4" width="500" height="400" controls poster="img/레드향.jpg"></video>
+        <h3>유투브 영상 넣기</h3>
+        <iframe width="700" height="500" 
+        src="https://www.youtube.com/embed/OEA49HUMI3U?si=rcw_YDl5nRS_mBa7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" 
+        allowfullscreen></iframe>
+        </div>
+      <aside>
+        <h3>어사이드 영역</h3>
+        <ol type="a" start="3">
+          <li>로그인창</li>
+          <li>쇼핑광고</li>
+          <li>날씨</li>
+          <li>증시</li>
+        </ol>
+        <p>코끼리 냉장고 안에 넣기</p>
+        <ol>
+          <li>냉장고 문을 연다</li>
+          <li>코끼리를 넣는다</li>
+          <li>문을 닫는다</li>
+        </ol>
+        <p>여행준비물</p>
+        <ul>
+          <li>여권</li>
+          <li>가방</li>
+          <li>지갑</li>
+          <li>과자</li>
+          <li>세면도구</li>
+        </ul>
+      </aside>
+      <footer>
+        <h3>푸터 영역</h3>
+        <p>저작정보, 주소, 개인정보보호방침, SNS 연결</p>
+      </footer>
+    </div>
+  </body>
+</html>

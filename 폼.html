@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>폼 만들기</title>
+  <style>
+    #container{
+      width: 600px;
+      margin: 0 auto;
+    }
+    form label{
+      width: 100px;/*폼에 너비가 안먹는다 왜일까? 레이블이 인라인속성이기 때문에*/
+      /* display: inline-block; */
+      float: left;
+      /* 인라인 블록은 바텀라인 기준으로 높이를 맞춘다 */
+    }
+    ul li{
+      list-style: none;
+      margin-bottom: 5px;
+    }.redtext{
+      color: red;
+    }
+    input:focus{
+      background-color: yellow;
+    }
+    /* input:disabled{
+      background-color: pink;
+    } */
+     input:checked+span{
+      font-weight: bold;
+      color:rgb(247, 9, 28);
+     }
+     fieldset:nth-child(2){
+      background-color: aqua;
+     }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <h1>폼 만들기</h1>
+    <form action="longin.jsp" method="post" name="login">
+      <fieldset><!--적으면 옆으로 정렬됨 인라인레벨-->
+        <legend>로그인 정보</legend>
+        <ul>
+          <li>
+            <label for="u_id">아이디<span class="redtext">*</span></label>
+            <input type="text" id="u_id" name="u_id" autofocus maxlength="5" required
+            disabled>
+          </li>
+          <li>
+            <label for="pw">비밀번호<span class="redtext">*</span></label>
+            <input type="password" id="pw" name="pw" placeholder="8자이상" required>
+            <!--required 요구사항: 안쓰고 전송하면 주의뜸-->
+          </li>
+        </ul> 
+      </fieldset>
+      <fieldset>
+        <legend>자료체크 타입</legend>
+        <ul>
+          <li>
+            <label for="search">검색</label><!--라벨이다 서치에 할당하는-->
+            <input type="search" id="search" name="search">
+            <!---->
+            <!--id는 자바스크립트 name은 서버로 보내기위해 필요함-->
+          </li>
+          <li>
+            <label for="url">홈페이지</label>
+            <input type="url" id="url" name="url" value="https://yedam" readonly>
+          </li>
+          <li>
+            <label for="email">메일주소</label>
+            <input type="email" id="email" name="email">
+          </li>
+          <li>
+            <label for="phone">전화번호</label>
+            <input type="tel" id="phone" name="phone" placeholder="-는 빼고 숫자만 입력">
+          </li>
+          <li>
+            <label for="file">파일전송</label>
+            <input type="file" id="file" name="file">
+          </li>
+          <li>
+            <label>색상선택</label>
+            <label>
+              <input type="radio" name="color" value="red">
+              <span>빨강</span>
+            </label>
+            <label>
+              <input type="radio" name="color" value="blue" checked>
+              <span>파랑</span>
+            </label>
+            <label>
+              <input type="radio" name="color" value="yellow">
+              <span>노랑</span>
+            </label>
+            <label>
+              <input type="radio" name="color" value="green">
+              <span>초록</span>
+            </label>
+            <!--라벨안에 radio를 넣어서 버튼주위를 눌러도 선택할수있게,밸류로 서버에 red값이 넘어감-->
+          </li>
+          <li>
+            <label>SNS</label><!--배열타입:여러개의 데이터를 저장가능 ex)checkbox / color는 배열타입x-->
+            <label><input type="checkbox" name="sns" value="insta" checked>인스타</label>
+            <label><input type="checkbox" name="sns" value="fb">페이스북</label>
+            <label><input type="checkbox" name="sns" value="tw">트위터</label>
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset>
+        <legend>숫자자료 입력</legend>
+        <ul>
+          <li>
+            <label for="number">스핀박스</label>
+            <input type="number" id="number" name="number" min="1" max="5" value="1" step="2">
+            <!--스핀박스 위아래로 숫자올리기 내리기가능-->
+            <!--value를 적어두면 초기값으로 서버에 넘어감-->
+            <!--step은 커지거나 작아지는 단위-->
+          </li>
+          <li>
+            <label for="range">슬라이더</label>
+            <input type="range" id="range" name="range" min="0" max="10" step="2" value="2">
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset>
+        <legend>날짜입력</legend>
+        <ul>
+          <li>
+            <label for="date">연월일</label>
+            <input type="date" id="date" name="date">
+          </li>
+          <li>
+            <label for="month">연월</label>
+            <input type="month" id="month" name="month">
+          </li>
+          <li>
+            <label for="week">연주</label>
+            <input type="week" id="week" name="week">
+          </li>
+          <li>
+            <label for="time">시간</label>
+            <input type="time" id="time" name="time">
+          </li>
+          <li>
+            <label for="datetime">연월일</label>
+            <input type="datetime-local" id="datetime" name="datetime">
+          </li>
+        </ul>
+      </fieldset>
+      <input type="submit" value="전송버튼">
+      <input type="reset" value="취소버튼">
+      <input type="button" value="창열기" onclick="window.open()">
+      <!--버튼에다가 온클릭으로 함수 설정-->
+      <fieldset>
+        <legend>기타</legend>
+        <ul>
+          <li>
+            <label for="texta">메모</label>
+            <textarea cols="40" rows="5"></textarea>
+          </li>
+          <li>
+            <label for="texta">공지사항</label>
+            <textarea cols="40" rows="5" readonly>공지사항
+              1. 5월 2일 등교
+              2. 5월 2일 웹기초 시험
+            </textarea>
+          </li>
+          <li>
+            <label for="select">색상 선택</label>
+            <select id="select">
+              <optgroup label="따뜻한색">
+                <option value="red">빨강</option>
+                <option value="oragne">주황</option>
+                <option value="yellow">노랑</option>
+              </optgroup>
+              <optgroup label="차가운색">
+                <option value="blue" selected>파랑</option>
+                <option value="skyblue">하늘색</option>
+                <option value="grey">회색</option>
+              </optgroup>
+            </select>
+          </li>
+          <li>
+            <label for="datalist">SNS</label>
+            <input type="text" id="datalist" name="datalist" list="snslist">
+            <!--데이터리스트 아이디는 인풋의 리스트와 같아야한다-->
+            <datalist id="snslist">
+              <option value="fb">페이스북</option>
+              <option value="instar">인스타그램</option>
+              <option value="twit">트위터</option>
+            </datalist>
+          </li>
+        </ul>
+      </fieldset>
+      
+    </form>
+  </div>
+</body>
+</html>

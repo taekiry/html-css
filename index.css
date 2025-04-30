@@ -1,0 +1,43 @@
+/* *{
+  padding: 0;
+  margin: 0;
+} */
+#container{
+  width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid gray;
+}
+span{
+  color: rgb(58, 223, 93);
+}
+header{
+  background-color: beige;
+  padding: 20px;
+}
+nav{
+  background-color: rgba(255,255,255,1);
+}
+main{
+  background-color: azure;
+  padding: 20px; 
+}
+section{
+  background-color: beige;
+  padding: 20px;
+}
+article{
+  background-color :bisque;
+  padding: 20px;
+  margin: 10px;
+}
+aside{
+  background-color: rgb(76, 145, 202);
+  padding: 20px;
+}
+footer{
+  background-color: #f1f;
+  color: #fff;
+  padding: 20px;
+  margin-top: 10px;
+}

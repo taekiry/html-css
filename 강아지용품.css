@@ -1,0 +1,64 @@
+#container{
+  width: 1000px;
+  margin: 0 auto;
+}
+header{
+  background-color: rgb(224, 126, 142);
+  padding: 10px;
+  overflow: hidden;
+}
+header img{
+  float: left;
+  width: 80px;
+  height: 80px;
+}
+nav{
+  width: 600px;
+  float: right;
+}
+nav li{
+  float: left;
+  margin: 0 20px;
+  padding: 10px;
+  list-style-type: none; 
+}
+nav a{
+  color: #FFF;
+  font-weight: bold;
+  text-decoration: none;/*하이퍼링크때문에 밑줄*/
+}
+main{
+  padding: 10px;
+  width: 800px;
+  float: left;
+}
+article{
+  width: 368px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  float: left;
+  margin: 5px;
+  height: 260px;
+}
+article p{
+  line-height: 1.8;
+}
+aside{
+  width: 180px;
+  float: right;
+  margin-top: 90px;
+}
+aside img{
+  width: 180px;
+  height: 188px;
+}
+footer{
+  background-color: rgb(6, 6, 104);
+  clear: both;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+footer p{
+  margin: 0px;
+}

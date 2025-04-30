@@ -1,0 +1,83 @@
+#container{
+  width: 1000px;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+header{
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+#subnav{
+  float: left;
+  background-color: beige;
+  width: 150px;
+  height: 440px;
+  margin-top: 10px;
+ 
+}
+#subnav ul{
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+#subnav a{
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+  color: #000;
+  margin: 0 auto;
+}
+main{
+  width: 600px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px 28px;
+  float: left;/*플롯 작업시 block 속성으로바뀜,메인이 투명해졌지만 글자는 보인다, 어사이드에도 글자가있어서 밑으로 들어가야되지만 삐져나와서 보여주는것*/
+  background-color: azure;
+}
+article img{
+  width: 200px;
+  height: 200px;
+  float: right;
+  margin: 0px 20px;
+}
+aside{
+  width: 150px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: beige;
+  float: right;
+  margin-top: 10px;
+}
+footer{
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: bisque;
+  clear: both;/*플롯 left,right 영향에서 벗어남 자기자리지킴*/
+}
+nav{
+  background-color: green;
+  overflow: hidden;/*부모크기가 정해져있을때 넘치는 자식 안보여줌, 플롯으로 뜬애들은 포함하여 보여줌*/
+}
+nav ul{
+  margin: 0;
+  padding: 0;
+}
+nav a{/*li에 패딩,컬러를 주더라도 하이퍼링크때문에 적용x a에게 직접줘야함*/
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  padding: 10px 30px;
+}
+nav li{
+  float: left;
+  list-style: none;
+}
+nav a:hover{
+  background-color:  #ff0;
+  color: #AAA;
+}
+nav li:last-child{
+  float:right;
+}

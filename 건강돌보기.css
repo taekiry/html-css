@@ -1,0 +1,57 @@
+#container{
+  width: 1000px;
+  margin: 0 auto;
+}
+header{
+  padding-left: 10px;
+  background-color: pink;
+  color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+header h1{
+  float: left;
+}
+nav{
+  margin-top: 10px;
+  float:right;
+}
+nav li{
+  float:left;
+  margin:10px;
+  list-style: none;
+}
+nav a{
+  color: #fff;
+  text-decoration: none;
+}
+.article{
+  float:left;
+  width:300px;
+  height:330px;
+  padding:10px;
+  margin-left: 10px;
+  margin-top: 10px;
+  background-color: rgb(252, 230, 234);
+  border-radius: 20px;
+}
+.clear{
+  clear:both;
+}
+img{
+  margin-left: 100px;
+  margin-right:40px;
+  float: right;
+  width: 300px;
+  height: 190px;
+}
+footer{
+  border-radius: 10px;
+  text-align: center;
+  height: 100px;
+  background: linear-gradient(45deg,pink,black);
+  line-height: 100px;
+}
+footer h3{
+  color: #fff;
+}

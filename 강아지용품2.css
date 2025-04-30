@@ -1,0 +1,39 @@
+h2{
+  background: url(img/래브라도.jpg) no-repeat left center;
+  background-size: 30px 26px;
+  padding-left: 30px;
+}
+body{
+  background: url(img/포메라니안.jpg) no-repeat fixed center;
+  background-size: 400px 400px;
+
+  
+}
+header{
+  /* background: linear-gradient(to right,#fff,blue 40%,yellow) */
+  background: repeating-linear-gradient(90deg,#eb9090,#ee9898 5%,blue 5%,blue 10%)
+  
+}
+#bg{
+  background: repeating-radial-gradient(closest-side at 50% 50%, rgb(197, 197, 134),rgb(209, 209, 144) 10%,rgb(131, 204, 131) 10%,rgb(149, 212, 149) 20%)
+}
+article p::first-line{
+  color: blue;
+}
+article p::first-letter{
+  font-size: 24px;
+  background-color: yellow;
+}
+/* section h2::after{
+  margin-left: 10px;
+  content:"🎃긴급🥼";
+  font-size: 16px;
+  color: #fff;
+  background-color: red;
+  position:relative;
+  top:-15px;
+} */
+ ::selection{
+  background-color: #000;
+  color:#fff;
+ }

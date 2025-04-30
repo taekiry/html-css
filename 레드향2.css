@@ -1,0 +1,42 @@
+#container{
+  width: 600px;
+  margin: 0 auto;
+}
+#df{
+  border: 1px solid #ccc;
+  border-top-right-radius: 10%;
+  border-top-left-radius: 10%;
+  padding: 10px;
+  margin: 10px 0;
+  overflow: hidden;
+}
+#df img{
+  width: 140px;
+  height: 220px;
+  float: left;
+  padding: 10px;
+  margin-right: 20px;
+}
+#recipe{
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+#recipe img{
+  width: 250px;
+  height: 200px;
+  float: right;
+  margin-left: 10px;
+}
+table{
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+}
+th,td{
+  border: 1px solid #ccc;
+  width: 150px;
+  text-align: center;
+  padding: 5px;
+}
+#표{
+  border: 1px solid #ccc;
+}

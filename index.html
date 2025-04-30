@@ -1,0 +1,119 @@
+<!doctype html> <!-- html 문서 형식이라고 선언 -->
+<html lang="ko"> <!-- html 문서 시작 lang는 언어 -->
+    <head> <!--보이지 않는 부분 -->
+        <meta charset="utf-8"> <!-- 인코딩 방식 utf-8은 유니코드-->
+        <title>첫페이지</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="css/index.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet"><style>
+            h1{
+                width: 300px;
+                height: 300px;
+                border: 2px solid red;
+                border-top-left-radius: 50%;
+                border-top-right-radius: 50%;
+                text-align: center;
+                line-height: 200px;
+                padding: 10px;
+                margin: 10px;
+                box-shadow: 2px 2px 17px 4px #F00 inset;
+            }
+            .textalign{
+                text-align: justify;
+                line-height: 2;
+                font-size: 16px;
+            }
+            nav a{
+                text-decoration: none;
+            }
+            h1{
+                text-shadow: 1px 1px 3px gray;
+            }
+            .boxsize-b{
+                box-sizing: border-box;
+                width: 300px;
+                height: 200px;
+                border: 2px solid gray;
+                text-align: center;
+                line-height: 200px;
+                padding: 10px;
+                margin: 10px;
+            }            
+            nav ul li{
+                height: 40px;
+                width: 150px;
+                display: inline-block;
+                padding: 0px 10px 0px 10px;/*패딩,마진은 탑부터 시계방향*/
+            }
+            nav ul li:nth-child(2){
+                background-color: yellow;
+            }
+            nav ul li:last-child{
+                border-right: none;
+            }
+            nav ul li:hover{/*마우스를 위에 올리면(호버)*/
+                box-sizing: border-box;
+                background-color: #74C0FC;
+                border-radius: 10px;
+                border-bottom: 3px solid #CCC;
+            }
+           
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <h1>웹문서 구조</h1>
+            <h1 class="boxsize-b">웹문서 구조2</h1>
+
+            <header>
+                <h2>헤더영역</h2>
+               <p>문서의 맨 위에 내용<br>
+                  <span>검색창</span></p><!--div랑 span은 영역설정-->
+                <nav>
+                    <ul>
+                    <li><a href="#">메뉴영역</a</li>
+                    <li><a href="#">🍙메뉴영역🍙</a></li>
+                    <li><a href="#">메뉴영역</a></li>
+                    <li><i class="fa-solid fa-house"></i>메뉴영역</li>
+                    <li><i class="fa-solid fa-house fa-bounce" style="color: #B197FC;"></i>메뉴항목</li>
+                    </ul>
+                </nav>
+            </header>
+            <hr>
+            <main>
+                 <h2><i class="fa-solid fa-user" style="color: #74C0FC;"></i>메인영역</h2>
+                <section>
+                    <h2>섹션의 제목</h2>
+                    <article>
+                        <h3>아티클 영역</h3>
+                        <p class="textalign"><strong>Lorem ipsum </strong><br><b><del>dolor</del></b>, <small><small>sit amet consectetur adipisicing elit. Asperiores ducimus ipsa totam minima iusto officiis vel autem magnam itaque dolorum reiciendis in, explicabo vero ipsum quidem molestiae a beatae neque.</small>
+                        </small></p>
+                        <blockquote cite ="www.naver.com"><em><b><ins><mark>Lorem ipsum</mark></ins></b></em> <br><i>dolor</i> sit amet consectetur adipisicing elit. At, consequatur optio molestiae harum dolores dolore ratione aperiam maiores animi nesciunt, quis rerum esse eum ullam, repudiandae eveniet non consectetur sunt!</blcokquote>
+                        </article>
+                    <article>
+                        <h3>줄임말 표현</h3>
+                        <p><abbr title="엉덩이를 뜨겁게"><q>엉뜨</q></abbr></p>
+                        <code>push()</code>
+                        <h3>y<sup>2</sup>=x<sup>2</sup> + 3</h3>
+                        <h3>H<sub>2</sub>O</h3>
+                        <pre> pre 태그는      입력한      그대로 표시</pre>
+                        <h3>
+                            <ruby>學習<rt>학습</rt></ruby>
+                        </h3>
+                    </article>
+                </section>
+            </main>
+            <hr>
+            <aside>
+               <h3>어사이드 영역</h3> 
+                <p>광고, 로그인</p>
+            </aside>
+            <footer>
+               <h3>푸터영역</h3> 
+               <p>저작자 정보, 개인정보 방침, SNS</p>
+            </footer>   
+        </div>
+    </body>
+</html> 

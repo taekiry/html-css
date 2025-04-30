@@ -1,0 +1,66 @@
+/*부모가 영역이 있으면 마진값이 안으로 들어가지만! 영역이 없을 경우 부모의 테두리가 없다. 그렇다면 부모의 부모와 마진크기 관계를 맺게됨*/
+/*만약 height나 width설정후 float한다면 차지하는 곳과 빈공간 계산을 해서 나눠줘야함*/
+#container{
+  width: 1000px;
+  margin: 0 auto;
+  
+}
+header{
+  background-color: rgb(7, 38, 138);
+  text-align: right;
+}
+nav li{
+  display:inline-block;
+  padding: 10px;
+  margin: 10px 20px;
+}
+nav ul{/*헤드영역과 맞닿기*/
+  margin: 0;
+}
+nav a{
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+main{
+  padding: 10px;
+  border: 5px solid rgb(116, 201, 250)
+}
+section li{
+  display: inline-block;
+  padding: 10px;
+}
+section ul{
+  text-align: center;
+}
+section a{
+  text-decoration: none;
+}
+article{
+  border: 2px dotted rgb(241, 165, 165);
+  border-radius: 10px;
+  padding: 10px;
+  
+}
+img{
+  width:150px;
+  height:150px;
+}
+figure{
+  text-align: center;
+}
+section p{
+  text-align: right;
+  margin-right: 20px;
+}
+aside{
+  background-color: pink;
+  padding: 10px;/*ul은 항상 마진을 먹는다.어사이드 영역에 패딩을 주지 않으면 ul이 메인의 마진과 관련되지만 영역 전개시 내려가게된다.*/
+}
+footer{
+  background-color: rgb(40, 17, 145);
+  color: #fff;
+  font-weight: bold;
+  padding: 10px;
+  text-align: center;
+}
